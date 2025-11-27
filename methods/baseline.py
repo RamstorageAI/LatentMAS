@@ -1,7 +1,7 @@
 from typing import Dict, List
 
 from models import ModelWrapper
-from src.prompts import build_agent_messages_single_agent
+from prompts import build_agent_messages_single_agent
 from utils import extract_gsm8k_answer, normalize_answer, extract_markdown_python_block, run_with_timeout
 
 
@@ -31,7 +31,7 @@ class BaselineMethod:
         if len(items) > self.generate_bs:
             raise ValueError("Batch size exceeds configured generate_bs")
         batch_messages = [
-            build_agent_messages_single_agent(role="singleagent", question=item["question"], context="",method=self.method_name, args=self.args)
+            build_agent_messages_single_agent(question=item["question"], args=self.args)
             for item in items
         ]
         prompts, input_ids, attention_mask, tokens_batch = self.model.prepare_chat_batch(
