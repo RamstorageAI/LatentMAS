@@ -157,7 +157,7 @@ python run.py --method latent_mas --model_name Qwen/Qwen3-14B --task gsm8k --pro
 #### Notes:
 
 * **`--latent_steps`** ∈ [0, 80]
-  Tune for best performance — typically **20–40** works well.
+  Tune for best performance.
 * **`--latent_space_realign`**
   Enables latent→embedding alignment
   We treat this as a **hyperparameter** — enable/disable depending on task/model:
@@ -219,6 +219,9 @@ CUDA_VISIBLE_DEVICES=0,1 python run.py --method latent_mas --model_name Qwen/Qwe
 > We modify the partial inner package inside vLLM backend for our method implementation.
 > Note minor numeric differences may arise compared to offical HF backend due to different decoding (generation) strategies. Please Use the HF backend to reproduce the official published results.
 
+## Awesome Works based on LatentMAS
+
+1. KNN-LatentMAS: [Blog](https://bookmaster9.github.io/kNN-latentMAS/) and [Code](https://github.com/Bookmaster9/kNN-latentMAS).
 
 ## 📚 Citation
 
