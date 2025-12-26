@@ -17,7 +17,7 @@ Latent Collaboration in Multi-Agent Systems
     <a href="https://arxiv.org/abs/2511.20639"><img src="https://img.shields.io/badge/arXiv-2511.20639-B31B1B.svg?logo=arxiv" alt="Arxiv"></a>
     <a href="https://huggingface.co/papers/2511.20639"><img src="https://img.shields.io/badge/Huggingface-DailyPaper-FFD21E.svg?logo=huggingface" alt="Huggingface Paper"></a>
     <a href="https://x.com/LingYang_PU/status/1993510834245714001"><img src="https://img.shields.io/badge/Coverage-LatentMAS-2176BC.svg?logo=x" alt="X"></a>
-  
+    <a href="https://github.com/Gen-Verse/LatentMAS/tree/Science-LatentMAS"><img src="https://img.shields.io/badge/Science--LatentMAS-Branch-2D8CFF.svg?logo=github" alt="Science-LatentMAS Branch"></a>
   </p>
 
 ---
@@ -45,11 +45,45 @@ Overall, LatentMAS achieves **superior performance**, **lower token usage**, and
 
 ## 🔔 News
 
+- **[2025-12-20]** Check [**Science-LatentMAS**](https://github.com/Gen-Verse/LatentMAS/tree/Science-LatentMAS), an excellent extension of LatentMAS developed by Prof. Markus J. Buehler and the [LAMM Lab](https://github.com/lamm-mit) at MIT. Science-LatentMAS is specifically designed for the scientific discovery downstream applications! For more details and instructions, please check our README section "Science-LatentMAS" below and the new `Science-LatentMAS` branch.
+- **[2025-12-15]** Check out these amazing community-driven extensions of LatentMAS!
+  - **[KNN-LatentMAS](https://github.com/Bookmaster9/kNN-latentMAS)** — Enables more efficient KV utilization for latent memory.
+  - **[Hybrid-LatentMAS](https://github.com/nhminle/LatentMAS-Hybrid)** — Extends LatentMAS to support hybrid, heterogeneous multi-agent systems.
+
 - **[2025-11-25]** We have released our paper and code implementations for LatentMAS! Stay tuned for more model-backbone supports and advanced features!
 - **[2025-11-25]** We are featured as 🤗 [**HuggingFace 1st Paper of the Day**](https://huggingface.co/papers/2511.20639)!
 
-## 📊 Experiments Overview
 
+## 🌐 Awesome Works Built on Top of LatentMAS
+
+Explore community-driven extensions that expand LatentMAS into new domains, architectures, and collaboration patterns:
+
+
+### 🔬 1. **Science-LatentMAS**
+**By Prof. Markus J. Buehler & MIT LAMM Group**  
+- **New Branch:** https://github.com/Gen-Verse/LatentMAS/tree/Science-LatentMAS  
+- **Original Code:** https://github.com/lamm-mit/LatentMAS/tree/flexible_agents  
+**What it adds:** Extends LatentMAS for scientific modeling and material-system collaboration, enabling flexible agent types and specialized latent communication for science domains.
+
+
+### 🧠 2. **KNN-LatentMAS**
+**By Bookmaster9**
+- **Blog (Overview):** https://bookmaster9.github.io/kNN-latentMAS/  
+- **Code:** https://github.com/Bookmaster9/kNN-latentMAS  
+**What it adds:** Introduces kNN-based latent retrieval to improve KV-cache usage, boosting memory efficiency and multi-step reasoning stability across agents.
+
+### 🤖 3. **Hybrid-LatentMAS**
+**By nhminle**
+- **Code:** https://github.com/nhminle/LatentMAS-Hybrid  
+**What it adds:** Supports heterogeneous / hybrid agent collaboration (LLM + non-LLM agents), enabling modular multi-agent pipelines that mix models, tools, and reasoning strategies.
+
+
+**If your work extends LatentMAS, feel free to open a PR and we’ll feature it here! 🚀**
+
+
+
+
+## 📊 Experiments Overview
 
 ### ⭐ Main Results  
 Three main tables from our paper spanning 9 tasks across math & science reasoning, commensonse reasoning, and code generation:
@@ -218,10 +252,6 @@ CUDA_VISIBLE_DEVICES=0,1 python run.py --method latent_mas --model_name Qwen/Qwe
 > vLLM does **not** officially support modifying KV-cache or prompting via latent embeddings.
 > We modify the partial inner package inside vLLM backend for our method implementation.
 > Note minor numeric differences may arise compared to offical HF backend due to different decoding (generation) strategies. Please Use the HF backend to reproduce the official published results.
-
-## 🌐 Awesome Works based on LatentMAS
-
-1. KNN-LatentMAS: [Blog](https://bookmaster9.github.io/kNN-latentMAS/) and [Code](https://github.com/Bookmaster9/kNN-latentMAS).
 
 ## 📚 Citation
 
