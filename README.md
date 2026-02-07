@@ -80,6 +80,7 @@ Explore community-driven extensions that expand LatentMAS into new domains, arch
 
 ### 👁️ 4. **Awareness Network**
 **By Everest-AN**
+- **Website:** https://awareness.market/
 - **Code:** https://github.com/everest-an/Awareness-Market
 **What it adds:** A decentralized AI awareness market product built on LatentMAS research, enabling autonomous agent collaboration and memory sharing.
 
